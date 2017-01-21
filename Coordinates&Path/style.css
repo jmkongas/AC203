@@ -1,0 +1,9 @@
+h1 {
+	font-size: 30px;
+	color:green;
+	font-family: 'Lato', sans-serif;
+}
+
+canvas {
+	border:2px solid black;
+}
