@@ -2,9 +2,6 @@ var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create
 var score = 0;
 var scoreText;
 
-var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update });
-
-
 function preload() {
 	game.load.image('sky','assets/sky.png');
 	game.load.image('ground','assets/platform.png');
@@ -14,8 +11,7 @@ function preload() {
 }
 
 function create() {
-	game.physics.startSystem(Phaser.Physics.ARCADE);
-	
+
 	//add sky as background
 	game.add.sprite(0,0,'sky');
 }
