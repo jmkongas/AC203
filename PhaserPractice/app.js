@@ -28,6 +28,8 @@ function create() {
 	// Ledges
 	var ledge = platforms.create(400,400, 'ground');
 	ledge.body.immovable = true;
+	ledge = platforms.create(0, 250, 'ground');
+	ledge.body.immovable = true;
 
 }
 
