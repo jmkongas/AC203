@@ -15,8 +15,6 @@ function create() {
 	//add sky as background
 	game.add.sprite(0,0,'sky');
 
-	//add a star for testing as background
-	game.add.sprite(0,0,'star');
 }
 
 function update() {
