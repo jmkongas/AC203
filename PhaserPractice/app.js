@@ -23,6 +23,11 @@ function create() {
 	// Ground
 	var ground = platforms.create(0, game.world.height - 50, 'ground');
 	ground.scale.setTo(2, 2);
+	ground.body.immovable = true;
+
+	// Ledges
+	var ledge = platforms.create(400,400, 'ground');
+	ledge.body.immovable = true;
 
 }
 
