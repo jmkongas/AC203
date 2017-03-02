@@ -51,6 +51,9 @@ function update() {
 	//Collision between user and platforms
 	game.physics.arcade.collide(player, platforms);
 
+	//reset player velocity
+	player.body.velocity.x = 0;
+	
 	//keyboard event
 	if (cursors.left.isDown) {
 		player.body.velocity.x= -150;
