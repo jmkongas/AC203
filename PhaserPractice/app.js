@@ -11,9 +11,17 @@ function preload() {
 }
 
 function create() {
+	game.physics.startSystem(Phaser.Physics.ARCADE);
 
 	//add sky as background
 	game.add.sprite(0,0,'sky');
+
+	//Making a group of platforms
+	platforms = game.add.physicsGroup();
+	platforms.enableBody = true;
+
+	// Ground
+	var ground = platforms.create(0, game.world.height - 50, 'ground');
 
 }
 
