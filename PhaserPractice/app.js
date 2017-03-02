@@ -22,6 +22,7 @@ function create() {
 
 	// Ground
 	var ground = platforms.create(0, game.world.height - 50, 'ground');
+	ground.scale.setTo(1, 1);
 
 }
 
