@@ -42,11 +42,27 @@ function create() {
 	player.body.gravity.y = 300;
 	player.body.collideWorldBounds = true;
 
+	// Set up keyboard events
+	cursors = game.input.keyboard.createCursorKeys();
+
 }
 
 function update() {
 	//Collision between user and platforms
 	game.physics.arcade.collide(player, platforms);
+
+	//keyboard event
+	if (cursors.left.isDown) {
+		player.body.velocity.x= -150;
+		player.animations.play("left");
+	}else if (cursors.right.isDown) {
+		player.body.velocity.x= 150;
+		player.animations.play("right");
+	}else {
+		//when player sprite stops
+		player.animations.stop();
+		player.frame = 4;
+	}
 
 
 }
