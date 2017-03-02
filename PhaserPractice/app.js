@@ -45,7 +45,8 @@ function create() {
 }
 
 function update() {
-
+	//Collision between user and platforms
+	game.physics.arcade.collide(player, platforms);
 
 
 }
