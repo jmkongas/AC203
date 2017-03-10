@@ -45,6 +45,17 @@ function create() {
   	//add cursors as keyboard input to control the player
   	cursors = game.input.keyboard.createCursorKeys();
 
+  	//add a group of stars
+  	stars = game.add.group();
+  	stars.enableBody = true;
+  	//use a for loop to create 12 stars, evenly spaced
+  	for (var i=0; i<12; i++){
+  		//create a star object
+  		var star = stars.create(70*i, 20,'star');
+  		star.body.gravity.y =200;
+  		star.body.bounce.y = 0.6 + Math.random()*0.3;
+  	}
+
 }
 
 function update() {
@@ -63,5 +74,11 @@ function update() {
 		player.body.velocity.x = 0;
 		player.frame = 4;
 	}
+
+	//player can jump when up key is pressed and when it is touching down
+	if(cursors.up.isDown && player.body.touching.down){
+		player.body.velocity.y = -300;
+	}
+
 
 }
