@@ -39,7 +39,7 @@ function create() {
   	// Run some physics on the sprite
 	game.physics.arcade.enable(player);
 	player.body.bounce.y = 0.2;
-	player.body.gravity.y = 30;
+	player.body.gravity.y = 300;
 
 
 
