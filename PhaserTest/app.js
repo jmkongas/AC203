@@ -84,4 +84,7 @@ function update() {
     	player.body.velocity.y = -300;
   	}
 
+  	// Collision between stars and platforms
+  	game.physics.arcade.collide(stars, platforms);
+
 }
