@@ -53,7 +53,7 @@ function update() {
     game.physics.arcade.collide(player, platforms);
 
     //reset player's velocity to zero once we lift off the cursors key
-    // player.body.velocity.x = 0;
+    player.body.velocity.x = 0;
 
     // Left / right key pressed
   	if (cursors.left.isDown){
@@ -69,7 +69,7 @@ function update() {
 
   	// Player can jump if touching ground
   	if (cursors.up.isDown && player.body.touching.down){
-    	player.body.velocity.y = -300;
+    	player.body.velocity.y = -200;
   	}
 
 }
