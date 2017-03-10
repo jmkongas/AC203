@@ -14,6 +14,14 @@ function create() {
 	//enable Physics in the game
 	game.physics.startSystem(Phaser.Physics.ARCADE);
 	game.add.sprite(0,0,'sky');
+
+	//Add platforms as a group that contain the ground and the 2 ledges that the user can jump on
+	platforms = game.add.group();
+	platforms.enableBody = true;
+
+	//create the ground, 50 from the edge of the canvas
+	var ground = platforms.create(0, game.world.height - 50, 'ground');
+
 }
 
 function update() {
