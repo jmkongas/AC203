@@ -31,60 +31,19 @@ function create() {
   	ledge = platforms.create(-150, 250, 'ground');
   	ledge.body.immovable = true;
 
-  	//Add a player to our canvas
-  	player = game.add.sprite(32, game.world.height - 150, 'dude');
-  	// Adding player animations
-  	player.animations.add('left', [0, 1, 2, 3], 10, true);
-  	player.animations.add('right', [5, 6, 7, 8], 10, true);
-  	// Run some physics on the sprite
-	game.physics.arcade.enable(player);
-	player.body.bounce.y = 0.2;
-	player.body.gravity.y = 300;
-	player.body.collideWorldBounds = true;
+  	//Add player to the canvas
+  	player = game.add.sprite(32, game.world.height-150,'dude')
+  	game.physics.arcade.enable(player);
+  	player.body.bounce.y=0.2;
+  	player.body.gravity.y = 300;
+  	
+  	player.animations.add('left',[0,1,2,3],10,true);
+  	player.animations.add('right',[5,6,7,8],10,true);
 
-	//add cursors as keyboard input
-	cursors = game.input.keyboard.createCursorKeys();
-
-	//add a group of stars
-	stars = game.add.group();
-	stars.enableBody = true;
-	// Let's make 12 stars, evenly spaced
-	for (var i = 0; i < 12; i++){
-		//create a star in stars group
-	  	var star = stars.create(i * 70, 0, 'star');
-	  	//add in gravity
-	  	star.body.gravity.y = 200;
-	  	//make them bounce at a different value
-	  	star.body.bounce.y = 0.7 + Math.random() * 0.2;
-	}
 
 }
 
 function update() {
-	 //  Collision between the player and the platforms
-    game.physics.arcade.collide(player, platforms);
-
-    //reset player's velocity to zero once we lift off the cursors key
-    player.body.velocity.x = 0;
-
-    // Left / right key pressed
-  	if (cursors.left.isDown){
-    	player.body.velocity.x = -150; //moving sprite left
-    	player.animations.play('left');
-  	} else if (cursors.right.isDown){
-    	player.body.velocity.x = 150; //moving sprite right
-    	player.animations.play('right');
-  	} else {
-    	player.animations.stop();
-    	player.frame = 4;
-  	}
-
-  	// Player can jump if touching ground
-  	if (cursors.up.isDown && player.body.touching.down){
-    	player.body.velocity.y = -300;
-  	}
-
-  	// Collision between stars and platforms
-  	game.physics.arcade.collide(stars, platforms);
+	
 
 }
