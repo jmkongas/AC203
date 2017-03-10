@@ -22,6 +22,14 @@ function create() {
 	//create the ground, 50 from the edge of the canvas
 	var ground = platforms.create(0, game.world.height - 50, 'ground');
 	ground.scale.setTo(2,2);
+	//prevent the ground from falling when we jump on it, so we have to make it immovable
+	ground.body.immovable = true;
+
+	// Add the platforms
+  	var ledge = platforms.create(400, 400, 'star');
+  	ledge.body.immovable = true;
+  	ledge = platforms.create(-150, 250, 'ground');
+  	ledge.body.immovable = true;
 
 }
 
