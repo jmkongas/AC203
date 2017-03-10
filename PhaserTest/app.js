@@ -26,7 +26,7 @@ function create() {
 	ground.body.immovable = true;
 
 	// Add the platforms
-  	var ledge = platforms.create(400, 400, 'star');
+  	var ledge = platforms.create(400, 400, 'ground');
   	ledge.body.immovable = true;
   	ledge = platforms.create(-150, 250, 'ground');
   	ledge.body.immovable = true;
