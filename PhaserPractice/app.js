@@ -13,7 +13,7 @@ function preload() {
 function create() {
 	game.physics.startSystem(Phaser.Physics.ARCADE);
 
-	//add sky as background
+	//add sky as backgroundgam
 	game.add.sprite(0,0,'sky');
 
 	//Making a group of platforms
