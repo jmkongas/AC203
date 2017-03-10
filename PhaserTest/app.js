@@ -33,8 +33,11 @@ function create() {
 
   	//Add a player to our canvas
   	player = game.add.sprite(32, game.world.height - 150, 'dude');
-
-
+  	// Adding player animations
+  	player.animations.add('left', [0, 1, 2, 3], 10, true);
+  	player.animations.add('right', [5, 6, 7, 8], 10, true);
+  	// Run some physics on the sprite
+	game.physics.arcade.enable(player);
 
 
 
