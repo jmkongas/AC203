@@ -15,6 +15,13 @@ function create() {
 	//create sky
 	game.add.sprite(0,0,'sky');
 
+	//add platforms as a group, that contains ground and the 2 ledges
+	platforms = game.add.group();
+	platforms.enableBody = true;
+
+	//create the ground inside the group
+	var ground = platforms.create(0,game.world.height-50,'ground');
+
 }
 
 function update() {
