@@ -9,7 +9,12 @@ function preload() {
 }
 
 function create() {
-	game.add.sprite(750,0,'ground');
+	//enable acrade game physics in the game
+	game.physics.startSystem(Phaser.Physics.ARCADE);
+
+	//create sky
+	game.add.sprite(0,0,'sky');
+
 }
 
 function update() {
