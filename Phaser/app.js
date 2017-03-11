@@ -30,6 +30,13 @@ function create() {
 	ledge = platforms.create(400,400,'ground');
 	ledge.body.immovable = true;
 
+	//add a player to the game
+	player = game.add.sprite (32,world.height -150,'dude');
+	//adding player animations
+	player.animations.add('left',[0,1,2,3],10,true);
+	player.animations.add('right',[5,6,7,8],10,true);
+
+
 }
 
 function update() {
