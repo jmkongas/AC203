@@ -35,6 +35,10 @@ function create() {
 	//adding player animations
 	player.animations.add('left',[0,1,2,3],10,true);
 	player.animations.add('right',[5,6,7,8],10,true);
+	//run physics on the player
+	game.physics.arcade.enable(player);
+	player.body.bounce.y = 0.2;
+	player.body.gravity.y = 300;
 
 
 }
