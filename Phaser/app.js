@@ -53,9 +53,15 @@ function update() {
 	//when left or right key pressed
 	if(cursors.left.isDown){
 		player.body.velocity.x = -150;
+		player.animations.play('left');
 	}
 	else if(cursors.right.isDown){
-		player.body.velocity.x = 150;	
+		player.body.velocity.x = 150;
+		player.animations.play('right');	
+	}else{
+		player.body.velocity.x = 0;
+		player.animations.stop();
+		player.frame = 4;
 	}
 
 
