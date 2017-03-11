@@ -22,6 +22,13 @@ function create() {
 	//create the ground inside the group
 	var ground = platforms.create(0,game.world.height-50,'ground');
 	ground.scale.setTo(2,2);
+	ground.body.immovable = true;
+
+	//add the 2 ledges
+	var ledge = platforms.create(-150,250,'ground');
+	ledge.body.immovable = true;
+	ledge = platforms.create(400,400,'ground');
+	ledge.body.immovable = true;
 
 }
 
