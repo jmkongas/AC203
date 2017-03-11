@@ -21,6 +21,7 @@ function create() {
 
 	//create the ground inside the group
 	var ground = platforms.create(0,game.world.height-50,'ground');
+	ground.scale.setTo(2,2);
 
 }
 
