@@ -56,6 +56,7 @@ function create() {
   		star.body.bounce.y = 0.6 + Math.random()*0.3;
   	}
 
+  	scoretext = game.add.text(350, 560, "Score : 0", {fontSize:'32px', fill:'#000'});
 }
 
 function update() {
