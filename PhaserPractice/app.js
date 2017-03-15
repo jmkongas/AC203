@@ -62,6 +62,8 @@ function update() {
 	//Collision between user and platforms
 	game.physics.arcade.collide(player, platforms);
 	game.physics.arcade.collide(stars, platforms);
+	//will call function collectStar whenever the player collides with the star
+	game.physics.arcade.overlap(player, stars, collectStar, null, this);
 	//reset player velocity
 	player.body.velocity.x = 0;
 	
@@ -81,6 +83,12 @@ function update() {
 	//player can jump if touching ground
 	if (cursors.up.isDown && player.body.touching.down){
 		player.body.velocity.y = -300;
+	}
+
+	//the star that collides with the player will be passed into this function and to be killed
+	function collectStar (player, star) {
+   	 	// Removes the star from the screen
+    	star.kill();
 	}
 
 }
