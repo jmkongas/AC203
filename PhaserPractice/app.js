@@ -91,7 +91,7 @@ function update() {
    	 	// Removes the star from the screen
     	star.kill();
     	score+=10;
-    	scoreText="Score : " +score;
+    	scoreText.text="Score : " +score;
 	}
 
 }
