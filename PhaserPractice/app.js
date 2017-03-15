@@ -39,7 +39,7 @@ function create() {
 	// enable and add physics
 	game.physics.arcade.enable(player);
 	player.body.bounce.y = 0.2;
-	player.body.gravity.y = 300;
+	player.body.gravity.y = 330;
 	player.body.collideWorldBounds = true;
 
 	// Set up keyboard events
