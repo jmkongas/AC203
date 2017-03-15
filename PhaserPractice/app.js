@@ -56,7 +56,7 @@ function create() {
   		star.body.bounce.y = 0.6 + Math.random()*0.3;
   	}
 
-  	scoretext = game.add.text(330, 560, "Score : 0", {fontSize:'32px', fill:'#000'});
+  	scoreText = game.add.text(330, 560, "Score : 0", {fontSize:'32px', fill:'#ffffff'});
 }
 
 function update() {
@@ -90,6 +90,8 @@ function update() {
 	function collectStar (player, star) {
    	 	// Removes the star from the screen
     	star.kill();
+    	score+=10;
+    	scoreText="Score : " +score;
 	}
 
 }
