@@ -82,7 +82,7 @@ function update() {
 
 	//player can jump if touching ground
 	if (cursors.up.isDown && player.body.touching.down){
-		player.body.velocity.y = -300;
+		player.body.velocity.y = -330;
 	}
 
 	//the star that collides with the player will be passed into this function and to be killed
