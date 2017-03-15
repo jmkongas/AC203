@@ -61,7 +61,7 @@ function create() {
 function update() {
 	//Collision between user and platforms
 	game.physics.arcade.collide(player, platforms);
-
+	game.physics.arcade.collide(stars, platforms);
 	//reset player velocity
 	player.body.velocity.x = 0;
 	
