@@ -45,6 +45,17 @@ function create() {
 	// Set up keyboard events
 	cursors = game.input.keyboard.createCursorKeys();
 
+	//add a group of stars
+  	stars = game.add.group();
+  	stars.enableBody = true;
+  	//use a for loop to create 12 stars, evenly spaced
+  	for (var i=0; i<12; i++){
+  		//create a star object
+  		var star = stars.create(70*i, 20,'star');
+  		star.body.gravity.y =200;
+  		star.body.bounce.y = 0.6 + Math.random()*0.3;
+  	}
+
 }
 
 function update() {
