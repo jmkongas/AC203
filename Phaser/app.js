@@ -1,4 +1,6 @@
 var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update });
+var score = 0;
+var scoreText;
 
 function preload() {
 	game.load.image('sky','assets/sky.png');
@@ -88,6 +90,7 @@ function update() {
 	//what happens when the player overlaps with the star
 	function collectStar(player,star){
 		star.kill();
+		score += 10;
 
 	}
 
