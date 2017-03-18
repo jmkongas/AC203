@@ -56,6 +56,8 @@ function create() {
 
 	}
 
+	scoreText = game.add.text(0,0, "Score : 0",{fontSize:'40px',fill:"#ffffff"});
+
 }
 
 function update() {
