@@ -50,7 +50,7 @@ function create() {
 
 	//create 12 stars with for loops
 	for ( var i = 0; i<12;i++){
-		var star = stars.create(60*i, 20, 'star');
+		var star = stars.create(70*i, 20, 'star');
 		star.body.gravity.y = 200;
 		star.body.bounce.y = 0.6 + Math.random()*0.3;
 
@@ -61,6 +61,7 @@ function create() {
 function update() {
 	//collision between player and platforms
 	game.physics.arcade.collide(player,platforms);
+	game.physics.arcade.collide(stars,platforms);
 
 	//when left or right key pressed
 	if(cursors.left.isDown){
